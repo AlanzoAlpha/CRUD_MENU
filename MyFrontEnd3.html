@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        ISLAND GRILL CUISINE MENU.
+    </title>
+    <link rel=  href= >
+</head>
+
+<body>
+    <h1>ISLAND GRILL CUISINE</h1>
+    <h2> The head chef can start adding dishes below.</h2>
+    
+    <table>
+        
+        <tr>
+            
+            <td>
+                
+                <form id = "creatForm" onsubmit="event.preventDefault(); submitDish();" autocomplete ="off"> 
+                    <div>
+                        <label>Dish Number*</label><label class="validation-error hide" id="valueValidationError">*</label>
+                        <input placeholder = "ID" type = "text" name = "dishNumber" id = "dishNumber">
+                    </div>
+                    <div>
+                        <label>Dish Name*</label><label class="validation-error hide" id="valueValidationError">*</label>
+                        <input placeholder = "Dish Name" type = "text" name = "dishName" id = "dishName">
+                    </div>
+                    <div>
+                        <label>Vegan Suitability (Yes/No)</label>
+                        <input placeholder = "(Yes/No)" type = "text" name = "veganSuitability" id = "veganSuitability">
+                    </div>
+                    <div>
+                        <label>Dish Price</label>
+                        <input placeholder = "Price" type = "text" name = "dishPrice" id = "dishPrice">
+                    </div>
+
+                    <div class = "form-action-buttons">
+                        <input type = "submit" value = "Update"> 
+                    </div>
+                </form>
+
+            </td>
+            <td>
+                <table class = "list" id="menuDishes">
+                    <thead>
+                        <tr>
+                            <th>Dish Number</th>
+                            <th>Dish Name</th>
+                            <th>Vegan Suitability </th>
+                            <th>Dish Price</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                            <th></th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+
+                </table>
+            </td>
+        </tr>
+          
+    </table>
+    <script src = "MyJS2.js"></script>
+</body>
+
+</html>
