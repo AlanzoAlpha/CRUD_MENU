@@ -81,4 +81,47 @@ public class Menu {
 		this.dishPrice = dishPrice;
 	}
 
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((dishName == null) ? 0 : dishName.hashCode());
+		result = prime * result + dishNumber;
+		result = prime * result + dishPrice;
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		result = prime * result + ((veganSuitability == null) ? 0 : veganSuitability.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Menu other = (Menu) obj;
+		if (dishName == null) {
+			if (other.dishName != null)
+				return false;
+		} else if (!dishName.equals(other.dishName))
+			return false;
+		if (dishNumber != other.dishNumber)
+			return false;
+		if (dishPrice != other.dishPrice)
+			return false;
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
+			return false;
+		if (veganSuitability == null) {
+			if (other.veganSuitability != null)
+				return false;
+		} else if (!veganSuitability.equals(other.veganSuitability))
+			return false;
+		return true;
+	}
+
 }

@@ -52,9 +52,9 @@ public class MenuServices {
 		return !this.repo.existsById(id);
 	}
 
-//	public List<Menu> getDishByName(String dishName) {
-//		return this.repo.findByDishName(dishName);
-//
-//	}
+	public List<Menu> getDishByName(String dishName) {
+		return this.repo.findByDishName(dishName);
+
+	}
 
 }

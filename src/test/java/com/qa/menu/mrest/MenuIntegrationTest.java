@@ -94,7 +94,7 @@ public class MenuIntegrationTest {
 	@Test
 	void testRead() throws Exception {
 		Menu menu = new Menu(1, "Fish&Chips", "No", 12);
-		menu.setId(1L); // wood object to match the one in wood-data.sql
+		menu.setId(1L); // menu object to match the one in wood-data.sql
 		List<Menu> menus = new ArrayList<>();
 		menus.add(menu);
 		String responseBody = this.mapper.writeValueAsString(menus);

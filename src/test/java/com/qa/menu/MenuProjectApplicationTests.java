@@ -12,7 +12,7 @@ class MenuProjectApplicationTests {
 
 //	@Test //Smokes test
 //	void giveCoverage() {
-//		EqualsVerifier.forClass(Wood.class).usingGetClass().verify();
-//	}​ 
+//		EqualsVerifier.forClass(Menu.class).usingGetClass().verify();
+//	}	​
 
 }
