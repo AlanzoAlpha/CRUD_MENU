@@ -5,12 +5,23 @@
     <title>
         ISLAND GRILL CUISINE MENU.
     </title>
-    <link rel=  href= >
+    <link rel="stylesheet" href="css.css">
+    <style>
+        body{
+            background-image: url("Sunsetbeach.gif");
+            background-repeat: no-repeat;
+            background-attachment: fixed; 
+            background-size: 100% 100%;
+        }
+        img {
+          border: 6px dotted #ff0000; 
+        }
+      </style>
 </head>
 
 <body>
     <h1>ISLAND GRILL CUISINE</h1>
-    <h2> The head chef can start adding dishes below.</h2>
+    <h2> The head chef can start add dishes below.</h2>
     
     <table>
         
@@ -21,7 +32,7 @@
                 <form id = "creatForm" onsubmit="event.preventDefault(); submitDish();" autocomplete ="off"> 
                     <div>
                         <label>Dish Number*</label><label class="validation-error hide" id="valueValidationError">*</label>
-                        <input placeholder = "ID" type = "text" name = "dishNumber" id = "dishNumber">
+                        <input placeholder = "Dish #" type = "text" name = "dishNumber" id = "dishNumber">
                     </div>
                     <div>
                         <label>Dish Name*</label><label class="validation-error hide" id="valueValidationError">*</label>
@@ -37,7 +48,7 @@
                     </div>
 
                     <div class = "form-action-buttons">
-                        <input type = "submit" value = "Update"> 
+                        <input type = "submit" value = "Log" > 
                     </div>
                 </form>
 
@@ -46,13 +57,14 @@
                 <table class = "list" id="menuDishes">
                     <thead>
                         <tr>
+                            <th>ID</th>
                             <th>Dish Number</th>
                             <th>Dish Name</th>
                             <th>Vegan Suitability </th>
                             <th>Dish Price</th>
                             <th>Edit</th>
+                            <th>Update</th>
                             <th>Delete</th>
-                            <th></th>
 
                         </tr>
                     </thead>
@@ -65,7 +77,7 @@
         </tr>
           
     </table>
-    <script src = "MyJS2.js"></script>
+    <script src = "MyJS4.js"></script>
 </body>
 
 </html>
