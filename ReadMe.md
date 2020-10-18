@@ -81,46 +81,46 @@ The images below is the front-end application. It has 5 user input at present.
 The following images shows CRUD operation on the front end:
 * *Create & Read*
 
-<img src="Images/app_dishes.png" width="1000" height = "500">
+<img src="Images/app_dishes.png" width="800" height = "400">
 
 * *Update*
 
-<img src="Images/app_update.png" width="1000" height = "500">
+<img src="Images/app_update.png" width="800" height = "400">
 
 * *Delete*
 
-<img src="Images/app_delete.png" width="1000" height = "500">
+<img src="Images/app_delete.png" width="800" height = "400">
 
 ### Databases
 The following image shows CRUD operation on GCP MySQL database:
 * *CRUD*
 
-<img src="Images/gcp_CRUD.png" width="1000" height = "500">
+<img src="Images/gcp_CRUD.png" width="800" height = "400">
 
 The following images shows CRUD operation on h2 database:
 * *Create & Read*
 
-<img src="Images/h2_dishes.png" width="1000" height = "500">
+<img src="Images/h2_dishes.png" width="800" height = "400">
 
 * *Update*
 
-<img src="Images/h2_update.png" width="1000" height = "500">
+<img src="Images/h2_update.png" width="800" height = "400">
 
 * *Delete*
 
-<img src="Images/h2_delete.png" width="1000" height = "500">
+<img src="Images/h2_delete.png" width="800" height = "400">
 
 ### Postman
 An application called the Postman is used to send data from the back-end to the database to make the coding lighter. An image of this application is displayed below:
 * *Postman*
 
-<img src="Images/postman.png" width="1000" height = "500">
+<img src="Images/postman.png" width="800" height = "400">
 
 ### Project Management
 A Jira Board was used to tract this project. It has the capability for monitoring, project collaboration and, project planning and management. The image below shows all my panning and processes. 
 * *Jira Board*
 
-<img src="Images/jiraboard.png" width="1000" height = "500">
+<img src="Images/jiraboard.png" width="800" height = "400">
 
 
 ### Testing
@@ -132,13 +132,15 @@ A Mokito unit testing was perform on my Back-End. This coverage of the test and 
 
  * *Integration Testing*
  
-<img src="Images/integrationtesting.png" width="1000" height = "500">
+<img src="Images/integrationtesting.png" width="800" height = "400">
 
 ### Risk Assessment
 * A risk assessment was perform to analyse and mitigate all potential risk. A table is presented below outlining these risks. 
  * *Risk Assessment*
  
-<img src="Images/risk_as.png" width="1000" height = "500">
+<img src="Images/risk_as.png" width="800" height = "400">
+.
+
 ## Known Issues
 There are no known issues with performance for CRUD operations. 
 
