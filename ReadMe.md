@@ -9,7 +9,7 @@ Below is an overview of my project which entails a full CRUD (create, read, upda
    * [Tools Used ](#Tools Used)
 * [Framework](#Framework)
    * [Font-End Application](#Font-End Application)
-   * [Databases](Databases)
+   * [Databases](#Databases)
    * [Postman](#Postman)
    * [Project Management](#Project Management)
    * [Testing](#Testing)
@@ -79,49 +79,48 @@ In addition, the following features are added:
 The images below is the front-end application. It has 5 user input at present.
 
 The following images shows CRUD operation on the front end:
-
 * *Create & Read*
 
-![][]
+<img src="Images/app_dishes.png" width="1000" height = "500">
 
 * *Update*
 
-![][]
+<img src="Images/app_update.png" width="1000" height = "500">
 
 * *Delete*
 
-![][]
+<img src="Images/app_delete.png" width="1000" height = "500">
 
-### DataBases
+### Databases
 The following image shows CRUD operation on GCP MySQL database:
 * *CRUD*
 
-![][]
+<img src="Images/gcp_CRUD.png" width="1000" height = "500">
 
 The following images shows CRUD operation on h2 database:
 * *Create & Read*
 
-![][]
+<img src="Images/h2_dishes.png" width="1000" height = "500">
 
 * *Update*
 
-![][]
+<img src="Images/h2_update.png" width="1000" height = "500">
 
 * *Delete*
 
-![][]
+<img src="Images/h2_delete.png" width="1000" height = "500">
 
 ### Postman
 An application called the Postman is used to send data from the back-end to the database to make the coding lighter. An image of this application is displayed below:
 * *Postman*
 
-![][]
+<img src="Images/postman.png" width="1000" height = "500">
 
 ### Project Management
 A Jira Board was used to tract this project. It has the capability for monitoring, project collaboration and, project planning and management. The image below shows all my panning and processes. 
 * *Jira Board*
 
-![][]
+<img src="Images/jiraboard.png" width="1000" height = "500">
 
 
 ### Testing
@@ -133,12 +132,13 @@ A Mokito unit testing was perform on my Back-End. This coverage of the test and 
 
  * *Integration Testing*
  
-![][]
+<img src="Images/integrationtesting.png" width="1000" height = "500">
+
 ### Risk Assessment
 * A risk assessment was perform to analyse and mitigate all potential risk. A table is presented below outlining these risks. 
  * *Risk Assessment*
  
-![][]
+<img src="Images/risk_as.png" width="1000" height = "500">
 ## Known Issues
 There are no known issues with performance for CRUD operations. 
 
@@ -150,19 +150,3 @@ There are a number of improvements that can be made to improve UX, UI, code impr
 
 ## Written By 
 Alanzo
-
-
-[erd1]: https://i.imgur.com/p9wji5S.png
-[ci]: https://i.imgur.com/2G7joFp.png
-[riskassessment]: https://i.imgur.com/btY8HRY.png
-[coverage]: https://i.imgur.com/WDaANiD.png
-[pytestconsole]: https://i.imgur.com/qaa3uzp.png
-[trello]: https://i.imgur.com/etDOlwa.png
-[buildstages]: https://i.imgur.com/ba7ntAo.png
-[homeloggedout]: https://i.imgur.com/91NbyWE.png
-[signup]: https://i.imgur.com/71f9E6y.png
-[login]: https://i.imgur.com/vzwaTtv.png
-[homeloggedin]: https://i.imgur.com/F4eXJKR.png
-[enterobservation]: https://i.imgur.com/WsBmL6k.png
-[homenewobservation]: https://i.imgur.com/NHxV8Gi.png
-[account]: https://i.imgur.com/oXDX1y3.png
