@@ -59,8 +59,7 @@ In addition, the following features are added:
    * *HTML*
    * *CSS*
    * *SQL*
-   * *Sprig Boot syntax*
-   * *README syntax*
+   * *Spring Boot syntax*
    
 * Applications:
    * *Jira Board*
