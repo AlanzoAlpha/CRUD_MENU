@@ -10,6 +10,7 @@ import javax.persistence.Id;
 @Entity
 public class Menu {
 
+//Attributes
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY) // setting the id field to AUTO_INCREMENT
 	private Long id;
@@ -26,6 +27,7 @@ public class Menu {
 		super();
 	}
 
+//Constructor 
 	public Menu(int dishNumber, String dishName, String veganSuitability, int dishPrice) {
 		super();
 		this.dishNumber = dishNumber;
@@ -35,18 +37,20 @@ public class Menu {
 
 	}
 
+// Converting all attributes to string
+	@Override
+	public String toString() {
+		return "Menu [dishNumber=" + dishNumber + ", dishName=" + dishName + ", veganSuitability=" + veganSuitability
+				+ ", dishPrice=" + dishPrice + "]";
+	}
+
+//Getters and Setters
 	public Long getId() {
 		return id;
 	}
 
 	public void setId(Long id) {
 		this.id = id;
-	}
-
-	@Override
-	public String toString() {
-		return "Menu [dishNumber=" + dishNumber + ", dishName=" + dishName + ", veganSuitability=" + veganSuitability
-				+ ", dishPrice=" + dishPrice + "]";
 	}
 
 	public int getDishNumber() {
@@ -81,18 +85,19 @@ public class Menu {
 		this.dishPrice = dishPrice;
 	}
 
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((dishName == null) ? 0 : dishName.hashCode());
-		result = prime * result + dishNumber;
-		result = prime * result + dishPrice;
-		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		result = prime * result + ((veganSuitability == null) ? 0 : veganSuitability.hashCode());
-		return result;
-	}
+//	@Override
+//	public int hashCode() {
+//		final int prime = 31;
+//		int result = 1;
+//		result = prime * result + ((dishName == null) ? 0 : dishName.hashCode());
+//		result = prime * result + dishNumber;
+//		result = prime * result + dishPrice;
+//		result = prime * result + ((id == null) ? 0 : id.hashCode());
+//		result = prime * result + ((veganSuitability == null) ? 0 : veganSuitability.hashCode());
+//		return result;
+//	}
 
+//Equals verifier method which helps to boost testing coverage
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)

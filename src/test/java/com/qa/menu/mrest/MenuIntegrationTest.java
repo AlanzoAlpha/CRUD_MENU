@@ -28,6 +28,7 @@ import com.qa.menu.menu.Menu;
 
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 @AutoConfigureMockMvc
+//Setting up dummy database for the integration test -- through calling a sql file stored local (Continuously testing)
 @Sql(scripts = { "classpath:menu-schema.sql",
 		"classpath:menu-dish.sql" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
 public class MenuIntegrationTest {
@@ -37,6 +38,7 @@ public class MenuIntegrationTest {
 	@Autowired
 	private ObjectMapper mapper;
 
+//Testing my create method
 	@Test
 	void testCreate() throws Exception {
 		Menu newMenu = new Menu(1, "Fish&Chips", "No", 12);
@@ -61,6 +63,7 @@ public class MenuIntegrationTest {
 		Menu menuResult = this.mapper.readValue(reqBody, Menu.class);
 	}
 
+//Test for my update method
 	@Test
 	void testUpdate() throws Exception {
 		Menu newMenu = new Menu(1, "Fish&Chips", "No", 12);
@@ -78,6 +81,7 @@ public class MenuIntegrationTest {
 		this.mockMVC.perform(request).andExpect(checkStatus).andExpect(checkBody);
 	}
 
+//Test for my delete method 
 	@Test
 	void testDelete() throws Exception {
 		RequestBuilder request = delete("/removeMenu/1");
@@ -86,11 +90,12 @@ public class MenuIntegrationTest {
 
 		this.mockMVC.perform(request).andExpect(checkStatus);
 
-//		ResultMatcher checkStatus2 = status().is(500);
-//
-//		this.mockMVC.perform(request).andExpect(checkStatus);
+		ResultMatcher checkStatus2 = status().is(500);
+
+		this.mockMVC.perform(request).andExpect(checkStatus);
 	}
 
+//Test for my read method
 	@Test
 	void testRead() throws Exception {
 		Menu menu = new Menu(1, "Fish&Chips", "No", 12);

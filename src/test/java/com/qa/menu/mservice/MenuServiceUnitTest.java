@@ -23,11 +23,11 @@ public class MenuServiceUnitTest {
 
 	@Autowired
 	private MenuServices service;
-
+//temporary database to store 
 	@MockBean
 	private MenuRepo repo;
 
-	// GIVEN - WHEN - THEN
+//Unit test for create method 
 	@Test
 	void testCreate() {
 		// GIVEN
@@ -45,6 +45,7 @@ public class MenuServiceUnitTest {
 		Mockito.verify(this.repo, Mockito.times(1)).save(newMenu);
 	}
 
+//Unit test for update method 
 	@Test
 	void testUpdate() {
 		// GIVEN
@@ -71,6 +72,7 @@ public class MenuServiceUnitTest {
 		Mockito.verify(this.repo, Mockito.times(1)).save(updatedMenu);
 	}
 
+//Unit test for get method 
 	@Test
 	void testGet() {
 		// GIVEN
@@ -88,6 +90,7 @@ public class MenuServiceUnitTest {
 		Mockito.verify(this.repo, Mockito.times(1)).findAll();
 	}
 
+//Unit test for delete method 
 	@Test
 	void testDelete() {
 		// GIVEN

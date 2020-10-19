@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.qa.menu.menu.Menu;
 import com.qa.menu.services.MenuServices;
 
+//This class handles all requests from client 
 @CrossOrigin
 @RestController
 public class MenuController {
@@ -28,46 +29,42 @@ public class MenuController {
 		super();
 		this.service = service;
 	}
+
 //  Trial code
-//	@GetMapping("/Hello")
-//	public String greeting() {
-//		return "Hello, World!";
-//	}
-
-//	@GetMapping("/menu/{ishName}")
-//	public List<Menu> getDishByName(@PathVariable String dishName) {
-//		return this.service.getDishByName(dishName);
-//	}
-
-	@GetMapping("/getMenu")
-	public ResponseEntity<List<Menu>> getMenu() {
-		// return this.service.getWood();
-		return ResponseEntity.ok(this.service.getMenu());
-//	public List<Menu> getMenu() {
-//		return this.service.getMenu();
-
-		// return new Menu(1,"Fish&Chip", No, 12);
+	@GetMapping("/Hello")
+	public String greeting() {
+		return "Hello, World!";
 	}
 
+//Maps https GET request to the dish names 
+	@GetMapping("/menu/{ishName}")
+	public List<Menu> getDishByName(@PathVariable String dishName) {
+		return this.service.getDishByName(dishName);
+	}
+
+//Maps https GET request to the get menu request 
+	@GetMapping("/getMenu")
+	public ResponseEntity<List<Menu>> getMenu() {
+		return ResponseEntity.ok(this.service.getMenu());
+
+	}
+
+//Maps https GET request to the create menu request  
 	@PostMapping("/createMenu")
 	public ResponseEntity<Menu> createMenu(@RequestBody Menu menu) {
 
 		return new ResponseEntity<Menu>(this.service.createMenu(menu), HttpStatus.CREATED);
-//		public void createMenu(@RequestBody Menu menu) {
-//		System.out.println(menu);
-//		this.service.createMenu(menu);
+
 	}
 
+//Maps https GET request to the update menu request
 	@PutMapping("/updateMenu")
 	public ResponseEntity<Menu> updateMenu(@RequestBody Menu menu, @PathParam("id") Long id) {
 		return new ResponseEntity<Menu>(this.service.updateMenu(menu, id), HttpStatus.ACCEPTED);
-//	public void updateMenu(@RequestBody Menu menu, @PathParam("id") Long id) {
-////		this.menuDB.remove(id);
-////		this.menuDB.add(id, menu);
-////		System.out.println(menu);
-//		this.service.updateMenu(menu, id);
+
 	}
 
+//Maps https GET request to the delete menu via ID 
 	@DeleteMapping("/removeMenu/{id}")
 	public ResponseEntity<Object> deleteMenu(@PathVariable Long id) {
 		if (this.service.deleteMenu(id)) {
@@ -76,9 +73,5 @@ public class MenuController {
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}
-////	public void deleteMenu(@PathVariable Long id) {
-////		this.menuDB.remove(id);
-////		this.service.deleteMenu(id);
-//	}
 
 }

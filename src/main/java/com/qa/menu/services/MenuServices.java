@@ -10,6 +10,7 @@ import com.qa.menu.domain.MenuRepo;
 import com.qa.menu.exceptions.MenuNotFoundException;
 import com.qa.menu.menu.Menu;
 
+//This class is for the different methods/services that can be done by users. When the controller gets the request this class provides the service.
 @Service
 public class MenuServices {
 
@@ -21,6 +22,7 @@ public class MenuServices {
 		this.repo = repo;
 	}
 
+//Create menu service/method
 	public Menu createMenu(Menu menu) {
 
 		return this.repo.save(menu);
@@ -31,8 +33,8 @@ public class MenuServices {
 		return this.repo.findAll();
 	}
 
+//Update menu service/method
 	public Menu updateMenu(Menu menu, Long id) {
-		// Menu islandGrilMenu = this.repo.findById(id).get();
 		Optional<Menu> optWood = this.repo.findById(id);
 		Menu islandGrilMenu = optWood.orElseThrow(() -> new MenuNotFoundException());
 		islandGrilMenu.setDishNumber(menu.getDishNumber());
@@ -46,12 +48,14 @@ public class MenuServices {
 
 	}
 
+//Delete menu service/method
 	public boolean deleteMenu(Long id) {
 		this.repo.deleteById(id);
 
 		return !this.repo.existsById(id);
 	}
 
+//Delete menu service/method
 	public List<Menu> getDishByName(String dishName) {
 		return this.repo.findByDishName(dishName);
 

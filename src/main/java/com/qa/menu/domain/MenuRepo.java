@@ -7,6 +7,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.qa.menu.menu.Menu;
 
 public interface MenuRepo extends JpaRepository<Menu, Long> {
-
+//stores specific request criteria. This one is get dish by name
 	List<Menu> findByDishName(String dishName);
 }
