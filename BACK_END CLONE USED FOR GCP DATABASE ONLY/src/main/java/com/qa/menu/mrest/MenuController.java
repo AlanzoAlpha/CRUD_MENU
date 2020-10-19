@@ -28,44 +28,25 @@ public class MenuController {
 		super();
 		this.service = service;
 	}
-//  Trial code
-//	@GetMapping("/Hello")
-//	public String greeting() {
-//		return "Hello, World!";
-//	}
-
-//	@GetMapping("/menu/{ishName}")
-//	public List<Menu> getDishByName(@PathVariable String dishName) {
-//		return this.service.getDishByName(dishName);
-//	}
+	
 
 	@GetMapping("/getMenu")
 	public ResponseEntity<List<Menu>> getMenu() {
-		// return this.service.getWood();
 		return ResponseEntity.ok(this.service.getMenu());
-//	public List<Menu> getMenu() {
-//		return this.service.getMenu();
 
-		// return new Menu(1,"Fish&Chip", No, 12);
 	}
 
 	@PostMapping("/createMenu")
 	public ResponseEntity<Menu> createMenu(@RequestBody Menu menu) {
 
 		return new ResponseEntity<Menu>(this.service.createMenu(menu), HttpStatus.CREATED);
-//		public void createMenu(@RequestBody Menu menu) {
-//		System.out.println(menu);
-//		this.service.createMenu(menu);
+
 	}
 
 	@PutMapping("/updateMenu")
 	public ResponseEntity<Menu> updateMenu(@RequestBody Menu menu, @PathParam("id") Long id) {
 		return new ResponseEntity<Menu>(this.service.updateMenu(menu, id), HttpStatus.ACCEPTED);
-//	public void updateMenu(@RequestBody Menu menu, @PathParam("id") Long id) {
-////		this.menuDB.remove(id);
-////		this.menuDB.add(id, menu);
-////		System.out.println(menu);
-//		this.service.updateMenu(menu, id);
+
 	}
 
 	@DeleteMapping("/removeMenu/{id}")
@@ -76,9 +57,6 @@ public class MenuController {
 			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}
-////	public void deleteMenu(@PathVariable Long id) {
-////		this.menuDB.remove(id);
-////		this.service.deleteMenu(id);
-//	}
+
 
 }

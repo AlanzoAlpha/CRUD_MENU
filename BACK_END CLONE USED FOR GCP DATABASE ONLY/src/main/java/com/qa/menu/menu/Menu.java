@@ -5,13 +5,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-//Object Relational Mapper (ORM) -  This converts classes to tables.
+
 
 @Entity
 public class Menu {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY) // setting the id field to AUTO_INCREMENT
+	@GeneratedValue(strategy = GenerationType.IDENTITY) 
 	private Long id;
 
 	private int dishNumber;

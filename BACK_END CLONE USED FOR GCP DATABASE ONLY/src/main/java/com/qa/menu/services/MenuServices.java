@@ -32,7 +32,6 @@ public class MenuServices {
 	}
 
 	public Menu updateMenu(Menu menu, Long id) {
-		// Menu islandGrilMenu = this.repo.findById(id).get();
 		Optional<Menu> optWood = this.repo.findById(id);
 		Menu islandGrilMenu = optWood.orElseThrow(() -> new MenuNotFoundException());
 		islandGrilMenu.setDishNumber(menu.getDishNumber());
